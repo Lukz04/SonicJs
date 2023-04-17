@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../img/land.png)
+}
+
+.game-board {
+    border-bottom: 15px solid #40a000;
+    background-image: url(../img/fundo.png);
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.spike {
+    position: absolute;
+    bottom: -1.7%;
+    width: 120px;
+    animation: spike-animation 1.5s linear infinite;
+}
+
+.sonic {
+    position: absolute;
+    width: 70px;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.tails {
+    position: absolute;
+    width: 75px;
+    animation: tails-animation 10s infinite linear;
+}
+
+
+
+@keyframes spike-animation {
+    from {
+        right: -13.5%;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 200px;
+    }
+
+    50% {
+        bottom: 200px;
+    }
+
+    60% {
+        bottom: 200px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes tails-animation {
+    from {
+        left: -60px;
+    }
+
+    to {
+        left: 100%;
+    }
+}
